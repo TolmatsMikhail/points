@@ -11,7 +11,6 @@ var colors = document.querySelector('.colors');
 var roundColor = 'orange'; 
 // Размер круга
 var roundSizeInput = document.querySelector('#round-size');
-
 var realRoundSize = roundSizeInput.value;
 
 document.querySelector('.size_real').innerHTML = realRoundSize;
@@ -49,6 +48,8 @@ function paintCircle(e) {
 		ctx.stroke();
 
 	} else {
+
+
 		ctx.moveTo(e.clientX, e.clientY); // откуда
 		ctx.fillStyle = roundColor;
 		ctx.lineTo(points[counter-1].posX, points[counter-1].posY); // куда
@@ -58,6 +59,8 @@ function paintCircle(e) {
 		ctx.fillStyle = roundColor;
 		ctx.lineTo(points[counter-2].posX, points[counter-2].posY); // куда
 		ctx.stroke();
+
+
 
 		ctx.beginPath();
 		ctx.arc(e.clientX, e.clientY, realRoundSize, 0, 2*Math.PI, false);

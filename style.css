@@ -13,7 +13,7 @@ body{
 	position: fixed;
 	right: 0;
 	top: 0;
-	width: 200px;
+	width: 300px;
 	border: 1px dashed #ccc;
 	padding-bottom: 20px;
 }
@@ -25,9 +25,19 @@ body{
 	padding: 10px 0;
 }
 .colors__item {
-	height: 60px;
-	width: 60px;
+	height: 30px;
+	width: 30px;
 	margin: 0 auto 10px;
+	transition: all 150ms linear;
+	cursor: pointer;
+}
+.colors__item:hover {
+	transform: scale(1.2);
+	transition: all 150ms linear;
+}
+.colors__item:active{
+	transform: scale(0.9);
+	transition: all 150ms linear;
 }
 .colors__item_red{
 	background-color: red;
@@ -47,7 +57,7 @@ body{
 .colors__item_violet{
 	background-color: violet;
 }
-.size{
+.size, .lines-numbers{
 	padding: 0 10px;
 	text-align: center;
 }
@@ -56,6 +66,6 @@ body{
 	display: block;
 	text-align: left;
 }
-#round-size{
+#round-size, #lines-numbers__input{
 	width: 100%;
 }
