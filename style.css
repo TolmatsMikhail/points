@@ -69,3 +69,25 @@ body{
 #round-size, #lines-numbers__input{
 	width: 100%;
 }
+.number__pointer{
+	display: block;
+	width: 88%;
+	margin: 15px auto 10px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+	border-top-right-radius: 0;
+	text-align: right;
+	position: relative;
+}
+.number__pointer::before{
+	display: block;
+	position: absolute;
+	content: '';
+	width: 0;
+	height: 0;
+	border: 10px solid transparent;
+	border-bottom: 10px solid black;
+	background-color: transparent;
+	right: 10px;
+	top: -21px;
+}
